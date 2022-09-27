@@ -5,20 +5,16 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using DeviceManagement_WebApp.Models;
+using System.Linq.Expressions;
 
 
 
-public class CategoryRepository 
+public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
 {
-    protected readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
-
-    protected ConnectedOfficeContext Context => _context;
-
-    // GET ALL: Categories
-    public List<Category> GetAll()
+    public CategoryRepository(ConnectedOfficeContext context) : base(context)
     {
-        return Context.Category.ToList();
     }
+  
 
 }
 

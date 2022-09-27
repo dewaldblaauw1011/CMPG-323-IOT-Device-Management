@@ -8,16 +8,10 @@ using DeviceManagement_WebApp.Models;
 
 
 
-public class ZoneRepository
+public class ZoneRepository : GenericRepository<Zone>, IZoneRepository
 {
-    protected readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
-
-    protected ConnectedOfficeContext Context => _context;
-
-    // GET ALL: Zones
-    public List<Zone> GetAll()
+    public ZoneRepository(ConnectedOfficeContext context) : base(context)
     {
-        return Context.Zone.ToList();
     }
 
 }

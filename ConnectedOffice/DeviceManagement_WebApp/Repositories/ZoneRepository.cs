@@ -10,7 +10,7 @@ using DeviceManagement_WebApp.Models;
 
 public class ZoneRepository
 {
-    protected readonly ConnectedOfficeContext _context = new CMPG323Context();
+    protected readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
 
     protected ConnectedOfficeContext Context => _context;
 
@@ -19,12 +19,6 @@ public class ZoneRepository
     {
         return Context.Zone.ToList();
     }
-
-    // TO DO: Add ‘Get By Id’
-    // TO DO: Add ‘Create’
-    // TO DO: Add ‘Edit’
-    // TO DO: Add ‘Delete’
-    // TO DO: Add ‘Exists’
 
 }
 

@@ -10,7 +10,7 @@ using DeviceManagement_WebApp.Models;
 
 public class CategoryRepository 
 {
-    protected readonly ConnectedOfficeContext _context = new CMPG323Context();
+    protected readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
 
     protected ConnectedOfficeContext Context => _context;
 

@@ -14,6 +14,8 @@ namespace DeviceManagement_WebApp.Controllers
     {
 
         private readonly IDeviceRepository _deviceRepository;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IZoneRepository _zoneRepository;
 
         public DevicesController(IDeviceRepository deviceRepository)
         {
